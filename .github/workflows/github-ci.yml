@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-base:
-    if: ${{ vars.SKIP_BASE != true }}
+    if: ${{ vars.SKIP_BASE != 'true' }}
     runs-on: ubuntu-latest
     steps:
       -
