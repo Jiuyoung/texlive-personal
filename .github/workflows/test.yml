@@ -15,4 +15,4 @@ jobs:
     steps:
 #     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: echo TAG_SUFFIX=latest`$(if [[ "$hh" = "yes" ]]; then echo "-doc"; fi)`
+      run: echo TAG_SUFFIX=latest`$(if [[ "${{ matrix.hh }}" = "yes" ]]; then echo "-doc"; fi)`
