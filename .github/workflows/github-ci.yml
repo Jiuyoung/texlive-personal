@@ -5,12 +5,9 @@ on:
     branches:
       - "main"
 
-env:
-  SKIP_BASE: false
-
 jobs:
   build-base:
-    if: ${{ env.SKIP_BASE != true }}
+    if: ${{ vars.SKIP_BASE != true }}
     runs-on: ubuntu-latest
     steps:
       -
