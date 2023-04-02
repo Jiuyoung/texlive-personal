@@ -36,7 +36,7 @@ ARG DOCFILES=no
 ARG SRCFILES=no
 ARG SCHEME=full
 # the mirror from which we will download TeX Live
-ARG TLMIRRORURL
+ARG TLMIRRORURL=rsync://rsync.dante.ctan.org/CTAN/systems/texlive/tlnet/
 # whether to create font and ConTeXt caches
 ARG GENERATE_CACHES=yes
 
