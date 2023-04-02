@@ -7,9 +7,6 @@ on:
 
 jobs:
   build-image:
-    # strategy:
-    #   matrix: 
-    #     arch: [linux/amd64, linux/arm64]
     runs-on: ubuntu-latest
     steps:
       -
@@ -35,3 +32,10 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: jiuyoung/texlive:latest
+      -
+        name: Update repo description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: jiuyoung/texlive
