@@ -13,6 +13,6 @@ ENV LANG=C.UTF-8 \
 
 # 直接安装
 RUN apt-get update -q && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -qy texlive-full && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -qy texlive-full make git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* 
