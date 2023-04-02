@@ -36,6 +36,7 @@ jobs:
           tags: jiuyoung/texlive:base
 
   build-x64:
+    if: ${{ success() || failure() }}
     needs: build-base
     strategy:
       matrix: 
