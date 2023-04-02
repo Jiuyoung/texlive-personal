@@ -1,4 +1,4 @@
-name: Build and Push TeXLive Docker Image
+name: Debian - Build and Push TeXLive Docker Image
 
 on:
   push:
@@ -67,6 +67,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+          file: Dockerfile.debian
           build-args: 
             DOCFILES=${{ matrix.docfiles }}
             SRCFILES=no
