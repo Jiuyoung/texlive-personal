@@ -1,1 +1,1 @@
-使用 GitHub Actions 来自动化构建 TeX live 的 AMD64 和 ARM64 版本镜像，Dockerfile 内容来自于[texlive](https://gitlab.com/islandoftex/images/texlive/-/tree/master/)，仅仅合并了 Dockerfile 并指定了下载地址，其他部分未修改。
+使用 GitHub Actions 来自动化构建 TeX live 的 AMD64 和 ARM64 版本镜像，基础镜像是 Ubuntu 22.10，使用 apt-get 安装 texlive-full 。

@@ -7,9 +7,9 @@ on:
 
 jobs:
   build-image:
-    strategy:
-      matrix: 
-        arch: [linux/amd64, linux/arm64]
+    # strategy:
+    #   matrix: 
+    #     arch: [linux/amd64, linux/arm64]
     runs-on: ubuntu-latest
     steps:
       -
@@ -32,6 +32,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: ${{ matrix.arch }}
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: jiuyoung/texlive:latest
